@@ -1,0 +1,21 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>VueJS Course</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <p v-if="counter >= 1 && counter < 3">v-if counter >= 1</p>
+      <h3 v-else-if="counter >= 3">v-if counter >= 3</h3>
+      <h2 v-else>Default. Hello!!</h2>
+      <p>{{ counter }}</p>
+      <button @click="counter++">+1</button>
+      <button @click="counter > 0 ? counter-- : counter">-1</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

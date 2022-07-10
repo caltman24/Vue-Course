@@ -1,0 +1,19 @@
+body {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+ul {
+  margin-bottom: 10px;
+}
+
+.pigeons {
+  color: red;
+}
+
+.eagles {
+  color: blue;
+}
+
+.parrots {
+  color: rgb(255, 0, 230);
+}
