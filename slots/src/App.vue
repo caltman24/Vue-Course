@@ -40,17 +40,17 @@ body {
   background-color: hsl(154, 100%, 50%);
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition-property: background, transform;
-  transition-duration: 400ms;
-  transition-timing-function: ease;
+  transition-property: background, border-radius;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
 }
 
 .btn:hover {
   cursor: pointer;
-  transform: scale(1.01) translateY(-0.75px);
-  background-color: hsl(154, 100%, 45%);
-  transition-property: background, transform;
-  transition-duration: 300ms;
-  transition-timing-function: ease;
+  background-color: hsl(154, 100%, 40%);
+  border-radius: 50%;
+  transition-property: background, border-radius;
+  transition-duration: 400ms;
+  transition-timing-function: ease-out;
 }
 </style>
