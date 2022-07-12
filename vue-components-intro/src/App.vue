@@ -1,7 +1,12 @@
 <template>
   <h2>Butt Muncher</h2>
   <GreetingMesage :age="age" />
-  <TheUser :age="age" @increase="age++" @decrease="age--" />
+  <TheUser
+    :age="age"
+    @increase="increaseAge"
+    @decrease="decreaseAge"
+    :ageChangeFn="increaseAgeCB"
+  />
 </template>
 
 <script>
@@ -13,6 +18,17 @@ export default {
   components: {
     GreetingMesage,
     TheUser,
+  },
+  methods: {
+    increaseAge() {
+      this.age < 30 ? this.age++ : this.age;
+    },
+    increaseAgeCB(num) {
+      this.age < 30 ? (this.age += num) : this.age;
+    },
+    decreaseAge() {
+      this.age <= 0 ? this.age : this.age--;
+    },
   },
   data() {
     return {
