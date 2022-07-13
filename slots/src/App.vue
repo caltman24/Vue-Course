@@ -1,7 +1,7 @@
 <template>
   <FormItem>
     <template v-slot:help>
-      <p>This is some help text</p>
+      <p>{{ helpText }}</p>
     </template>
     <template v-slot:fields>
       <input type="text" placeholder="email" />
@@ -17,6 +17,11 @@ export default {
   name: "App",
   components: {
     FormItem,
+  },
+  data() {
+    return {
+      helpText: "This is some help text",
+    };
   },
 };
 </script>
