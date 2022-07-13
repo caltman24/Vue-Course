@@ -1,13 +1,15 @@
 <template>
   <form>
     <div class="help">
-      <slot name="help">Help Text</slot>
+      <slot name="help">Put help text here</slot>
     </div>
     <div class="fields">
-      <slot name="fields"></slot>
+      <slot name="fields">Put input fields here</slot>
     </div>
     <div class="buttons">
-      <slot name="buttons">No Button</slot>
+      <slot name="buttons">
+        <button @click.prevent type="submit" class="btn">submit</button>
+      </slot>
     </div>
   </form>
 </template>

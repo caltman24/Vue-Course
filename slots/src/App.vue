@@ -8,9 +8,6 @@
       <input type="text" placeholder="username" />
       <input type="password" placeholder="password" />
     </template>
-    <template v-slot:buttons>
-      <button type="submit" class="btn">submit</button>
-    </template>
   </FormItem>
 </template>
 
