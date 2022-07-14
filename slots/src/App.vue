@@ -18,6 +18,13 @@ export default {
   components: {
     FormItem,
   },
+  data() {
+    return {
+      user: {
+        name: "corbyn",
+      },
+    };
+  },
 };
 </script>
 
