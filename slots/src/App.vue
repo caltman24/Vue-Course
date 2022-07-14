@@ -20,13 +20,7 @@ export default {
   },
   data() {
     return {
-<<<<<<< HEAD
-      user: {
-        name: "corbyn",
-      },
-=======
       helpText: "This is some help text",
->>>>>>> 3d53b7004bea34ebda110031719b3009e6ce50de
     };
   },
 };
