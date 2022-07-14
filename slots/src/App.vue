@@ -1,7 +1,7 @@
 <template>
   <FormItem>
     <template v-slot:help>
-      <p>This is some help text</p>
+      <p>{{ helpText }}</p>
     </template>
     <template v-slot:fields>
       <input type="text" placeholder="email" />
@@ -20,9 +20,13 @@ export default {
   },
   data() {
     return {
+<<<<<<< HEAD
       user: {
         name: "corbyn",
       },
+=======
+      helpText: "This is some help text",
+>>>>>>> 3d53b7004bea34ebda110031719b3009e6ce50de
     };
   },
 };
