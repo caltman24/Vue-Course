@@ -1,13 +1,19 @@
 <template>
-  <div class="result">
-    <div class="title">You got sample result 1!</div>
-    <div class="desc">Enter a short description here about the result.</div>
+  <div class="result" v-for="result in results" :key="result.title">
+    <div v-show="totalCorrect >= result.min && totalCorrect <= result.max">
+      <div class="title">{{ result.title }}</div>
+      <div class="desc">{{ result.desc }}</div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "Result",
+  props: {
+    totalCorrect: Number,
+    results: Array,
+  },
 };
 </script>
 
