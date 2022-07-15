@@ -1,9 +1,7 @@
 <template>
-  <div class="result" v-for="result in results" :key="result.title">
-    <div v-show="totalCorrect >= result.min && totalCorrect <= result.max">
-      <div class="title">{{ result.title }}</div>
-      <div class="desc">{{ result.desc }}</div>
-    </div>
+  <div class="result">
+    <div class="title">{{ results[resultIndex].title }}</div>
+    <div class="desc">{{ results[resultIndex].desc }}</div>
   </div>
 </template>
 
@@ -13,6 +11,19 @@ export default {
   props: {
     totalCorrect: Number,
     results: Array,
+  },
+  computed: {
+    resultIndex() {
+      let index = 0;
+
+      this.results.forEach((e, i) => {
+        if (this.totalCorrect >= e.min && this.totalCorrect <= e.max) {
+          index = i;
+        }
+      });
+
+      return index;
+    },
   },
 };
 </script>
